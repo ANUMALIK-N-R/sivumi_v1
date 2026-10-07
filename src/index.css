@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-display: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --color-blush-50: #FFF5F7;
+  --color-blush-100: #FFF0F3;
+  --color-blush-200: #FFD1DC;
+  --color-blush-300: #F7BAC5;
+  --color-blush-400: #E5989B;
+  --color-mauve-500: #B5838D;
+  --color-mauve-700: #6D597A;
+  --color-mauve-900: #352641;
+  --color-cream-50: #FCF8F5;
+  --color-cream-100: #F7EFE9;
+}
+
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: #FAF8F5;
+  color: #2C2428;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Custom delicate scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #EAE3DE;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B5838D;
+}
+
+
+@layer components {
+  .label {
+    @apply text-[10px] font-semibold text-[#8C7E86] uppercase tracking-wider block mb-1;
+  }
+  .input {
+    @apply w-full bg-[#FAF8F5] border border-[#EAE3DE] rounded-xl px-3 py-2 text-xs text-[#2C2428] focus:outline-none focus:border-[#B5838D];
+  }
+}
